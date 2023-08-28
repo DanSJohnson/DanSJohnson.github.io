@@ -2035,6 +2035,27 @@ input, select, textarea {
 			font-family: 'Font Awesome 5 Brands';
 		}
 
+/* Video Class */
+	.video-container {
+		border-radius: 0.35em;
+		display: block;
+		margin: 0 0 2em 0;
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+		height: 0;
+	}
+	
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	
+
 /* Image */
 
 	.image {
