@@ -2056,6 +2056,50 @@ input, select, textarea {
 	}
 	
 
+/* Marquee Class */
+.marquee-item {
+    /* Your existing styling for article elements */
+}
+
+.marquee-container {
+    border-radius: 0.35em;
+    display: block;
+    margin: 0 0 2em 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /* Set the desired aspect ratio */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 7.5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* Make the content twice as wide for continuous scrolling */
+}
+
+.marquee-content img {
+    /* Maintain aspect ratio and fit to container height */
+    max-width: 100%;
+    height: 100%;
+    margin-right: 0em; /* Add spacing between images */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%); /* Half the width for continuous scrolling */
+    }
+}
+
+
+
 /* Image */
 
 	.image {
