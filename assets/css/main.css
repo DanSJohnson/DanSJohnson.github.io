@@ -2075,17 +2075,18 @@ input, select, textarea {
 
 .marquee-content {
     display: flex;
-    animation: marquee 7.5s linear infinite;
+    animation: marquee 15s linear infinite; /* Adjust duration as needed */
     position: absolute;
     top: 0;
     left: 0;
-    width: 200%; /* Make the content twice as wide for continuous scrolling */
+    width: fit-content; /* Adjust to content width */
 }
 
 .marquee-content img {
-    /* Maintain aspect ratio and fit to container height */
-    max-width: 100%;
+    /* Set the height to match the marquee container's height */
     height: 100%;
+    width: auto;
+    object-fit: contain; /* Adjust to fit, preserving aspect ratio */
     margin-right: 0em; /* Add spacing between images */
 }
 
@@ -2094,9 +2095,10 @@ input, select, textarea {
         transform: translateX(0%);
     }
     100% {
-        transform: translateX(-50%); /* Half the width for continuous scrolling */
+        transform: translateX(calc(-100% + 1em)); /* Slight adjustment to ensure seamless repeat */
     }
 }
+
 
 
 
